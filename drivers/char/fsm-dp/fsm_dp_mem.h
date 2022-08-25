@@ -256,7 +256,7 @@ static inline unsigned int calc_ring_size(unsigned int elements)
 /* set buffer state, ptr: pointing to beginging of buffer user data */
 static inline void fsm_dp_set_buf_state(void *ptr, enum fsm_dp_buf_state state)
 {
-	struct fsm_dp_buf_cntrl *pf = (ptr - FSM_DP_L1_CACHE_BYTES);
+	struct fsm_dp_buf_cntrl *pf = (ptr - FSM_DP_MSG_CNTL_BLK);
 
 	pf->state = state;
 }
